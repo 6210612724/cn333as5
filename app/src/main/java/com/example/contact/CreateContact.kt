@@ -48,7 +48,7 @@ class CreateContact : AppCompatActivity() {
         val number = Number.text.toString()
 
         if (firstname.isEmpty() || lastname.isEmpty() ||  number.isEmpty() ){
-            val toast = Toast.makeText(this@CreateContact, "Please Enter Number", Toast.LENGTH_SHORT)
+            val toast = Toast.makeText(this@CreateContact, "Please Enter Require information", Toast.LENGTH_SHORT)
             toast.show()
         }else{
 
