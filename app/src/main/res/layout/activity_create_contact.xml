@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateContact">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="58dp"
+
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="58dp"
+        android:text="Create New Contact"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/Firstname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Firstname"
+        android:layout_width="333dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Firstname"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/Lastname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/Lastname"
+        android:layout_width="333dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Lastname"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/rdg_main_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Firstname" />
+
+    <RadioGroup
+        android:id="@+id/numberType"
+        android:layout_width="316dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Lastname">
+
+
+        <RadioButton
+            android:id="@+id/molbile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:checked="true"
+            android:text="Moblie" />
+
+        <RadioButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="Home" />
+
+        <RadioButton
+            android:id="@+id/work"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content"
+            android:text="Work" />
+
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/Number"
+        android:layout_width="262dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/SaveContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberType" />
+
+    <Button
+        android:id="@+id/SaveContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginBottom="217dp"
+        android:text="Save"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
